@@ -14,10 +14,10 @@ const binarySearch = (data, value) => {
     } else if (midPointValue < value) {
       // If the value we're searching for is greater than the midPointValue, we know the value is in the right half of the array
       // Move the lowIndex to the middle, since we know that the items before the middle are not the values we're searching for
-      lowIndex = midPointIndex + 1;
+      lowIndex = midPointIndex + 1; // Since we already compared against the value at the midPoint, moving index +1 past it.
     } else {
       // Move the highIndex to the middle, since we know that the items after the middle are not the values we're searching for
-      highIndex = midPointIndex - 1;
+      highIndex = midPointIndex - 1; // Since we already compared against the value at the midPoint, moving index -1 before it.
     }
   }
 
